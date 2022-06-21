@@ -58,7 +58,11 @@ class User < ApplicationRecord
     
     # 有効化トークンとダイジェストを作成及び代入する
     def create_activation_digest
+<<<<<<< HEAD
       self.activation_token  = User.new_token
+=======
+      self.activation_token = User.new_token
+>>>>>>> f72d541d2269f62fa1c2cbb24d582f649c5e8328
       self.activation_digest = User.digest(activation_token)
     end
 end
