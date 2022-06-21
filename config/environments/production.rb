@@ -69,11 +69,11 @@ Rails.application.configure do
   host = 'https://rails-tutorial-sample-ryu2742.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :post => ENV['MAILGUN_SMTP_PORT'],
+    :port => ENV['MAILGUN_SMTP_PORT'],
     :address => ENV['MAILGUN_SMTP_SERVER'],
     :user_name => ENV['MAILGUN_SMTP_LOGIN'],
     :password => ENV['MAILGUN_SMTP_PASSWORD'],
-    :damain => host,
+    :domain => host,
     :authentication => :plain,
   }
 
